@@ -220,13 +220,13 @@
 					.text(label_y);
 
 				// Color scale
-				var color = d3.scaleOrdinal()
+				var color = d3.scaleSequential()
 					.domain(list_x)
-					.range(["lightblue", "blue"]); //d3.schemeCategory10);
+				.interpolator(d3.interpolateBlues);; //d3.schemeCategory10);
 
 				const opacity = 0.6
 
-				// create a tooltip
+				// Create a tooltip
 				var Tooltip = d3.select("#plot")
 					.append("div")
 					.style("opacity", 0)
