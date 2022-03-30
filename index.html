@@ -11,28 +11,18 @@
 		body{
 			font-family: Arial, Helvetica, sans-serif;
 			font-family: "Exo", "Red Hat Display", Segoe, "sans-serif";*/;
-			font-size: 12px;
+			font-size: 14px;
 			text-align: justified;
 			/* text-align: center; */
 		}
 
 		div.tooltip {	
-			/* position: absolute;			 */
-			/* text-align: center;			 */
-			/* width: 60px;					 */
-			/* height: 28px;					 */
 			padding: 2px;				
-			font: 12px;	
+			font: 14px;	
 			/* background: white;	 */
 			border: 0px;		
 			border-radius: 8px;			
 			pointer-events: none;	
-			/* .style("background-color", "white")
-			.style("border", "solid")
-			.style("border-width", "2px")
-			.style("border-radius", "5px")
-			.style("padding", "5px")
-					 */
 		}
 	</style>
 </head>
@@ -62,29 +52,13 @@
 	https://d3-graph-gallery.com/graph/interactivity_tooltip.html
 	https://d3-graph-gallery.com/graph/boxplot_several_groups.html
 	https://d3-graph-gallery.com/scatter.html
-		-->
+	-->
 	
-	<!-- 
-	<script src="https://cdn.jsdelivr.net/npm/apache-arrow@latest"></script>
-	<script src="https://cdn.jsdelivr.net/npm/arquero@latest"></script> -->
-
-	<!-- <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script> -->
-
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script> -->
-
-	<!-- <script src="https://cdn.plot.ly/plotly-2.9.0.min.js"></script> -->
-
 	<script src="https://d3js.org/d3.v4.js"></script>
 	
-	<!-- <button onclick="update('storey_range')">Colour by Storey Range</button>
-	<button onclick="update('town')">Colour by Town</button> -->
-
 	<div id="plot" style="width:600px;height:400px;"></div>
 
     <script>
-        // let url_file = "http://okiane.asuscomm.com/sutd_idv/Assignment3/resale-flat-prices.json";
-
-		// let url_file = "https://data.gov.sg/api/action/datastore_search?resource_id=f1765b54-a209-4718-8d38-a39237f502b3&limit=150000";
 
 		let url_file = "https://data.gov.sg/api/action/datastore_search?resource_id=f1765b54-a209-4718-8d38-a39237f502b3&q=4 ROOM&limit=200";
 
@@ -248,7 +222,7 @@
 				// Color scale
 				var color = d3.scaleOrdinal()
 					.domain(list_x)
-					.range(["#f7fbff","#deebf7","#c6dbef","#9ecae1","#6baed6","#4292c6","#2171b5","#084594"]); //d3.schemeCategory10);
+					.range(["lightblue", "blue"]); //d3.schemeCategory10);
 
 				const opacity = 0.6
 
@@ -345,12 +319,6 @@
 		}
 
 		plot_graph('storey_range') //town
-
-		// // A function that create / update the plot for a given variable:
-		// function update(col_name_group) {
-		// 	plot_graph(col_name_group)
-		// // Initialize the plot with the first dataset
-		// }
 
 
 	</script>
