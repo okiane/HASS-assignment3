@@ -40,7 +40,7 @@
 	A scatterplot will allow us to best examine the relationship. By inspecting the distribution of colours and hovering over the points for more details, we can make a few preliminary conclusions that 
 	<br> (1) The resale price drops drastically from 1150 months (96 years and 1 month, occupancy of about 4 years) left to 950 months (79 years and 5 months, occupancy of 20 years). With more retrieved points, we can calculate what might be the longest occupancy period for an owner to sell the flat before the flat value decreases drastically. A boxplot might illustrate this better with the median resale prices. However, it may require further binning (which may introduce some bias due to the choice of the bin size and processing) and we are also not able to examine the effect of storey range on the resale price at one glance. 
 	<p></p>
-	<br> (2) There seems to be no clear relationship between the resale price per square meter for the different storey ranges (as seen from the intensity of the colours of the circles) for flats with the same remaining lease period. High storey flats are sold at both high and low resale prices (e.g. 825 months left).
+	<br> (2) There seems to be no clear relationship between the resale price per square meter for the different storey ranges (as seen from the distribution of colours of the circles) for flats with the same remaining lease period. High storey flats are sold at both high and low resale prices (e.g. 825 months left).
 
 	<p></p>
 	This interactive graph is designed by Ong Kian Eng using d3.
@@ -222,7 +222,7 @@
 				// Color scale
 				var color = d3.scaleOrdinal()
 					.domain(list_x)
-					.range(["#deeeff","#c4e2ff","#c6dbef","#9ecae1","#6baed6","#4292c6","#2171b5","#084594"]); //d3.schemeCategory10);
+					.range(d3.schemeCategory10); //["#deeeff","#c4e2ff","#c6dbef","#9ecae1","#6baed6","#4292c6","#2171b5","#084594"]); //d3.schemeCategory10);
 
 				const opacity = 0.6
 
